@@ -42,6 +42,16 @@ class IngredientItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             child: Image.network(imageUrl, width: w*.2,height: h*.1,fit: BoxFit.cover,),
           ),
+          Text(
+            "$food\n$quantity $measure",
+            style: TextStyle(
+              fontSize: w*.04,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1,
+            ),
+          ),
+          SizedBox(width: w*.033,),
+          Icon(Icons.remove_red_eye, size: w*.07,)
         ],
       ),
     );
