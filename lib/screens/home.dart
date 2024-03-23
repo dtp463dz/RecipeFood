@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recipefood/components/bottom_nav_bar.dart';
 import 'package:recipefood/screens/home_screen.dart';
 import 'package:recipefood/screens/profile.dart';
+import 'package:recipefood/screens/recipe_category.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -48,9 +49,7 @@ class _HomeState extends State<Home> {
         physics: const NeverScrollableScrollPhysics(),
         children: [
           HomePage(),
-          Center(
-            child: Text('Page 2'),
-          ),
+          RecipeCategory(),
           Center(
             child: Text('Page 3'),
           ),

@@ -18,7 +18,7 @@ class IngredientItem extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: h*.01, horizontal: w*.033),
       padding: EdgeInsets.only(
         top: h*.008,
-        bottom: h*.033,
+        bottom: h*.008,
         left: h*.008,
         right: w*.08,
       ),
