@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:recipefood/constants/constants_function.dart';
+import 'package:recipefood/screens/detail_screen.dart';
 import '../components/custtom_app_bar.dart';
 
 class AllRecipe extends StatelessWidget {
@@ -44,14 +46,21 @@ class AllRecipe extends StatelessWidget {
                           flex: 3,
                             child: Stack(
                               children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey,
-                                    borderRadius: BorderRadius.circular(20),
-                                    image: DecorationImage(
-                                      image: NetworkImage(snap['image'],),
-                                      fit: BoxFit.cover,
-                                    )
+                                GestureDetector(
+                                  onTap: (){
+                                    Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) => DetailScreen(item:snap)),
+                                    );
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      borderRadius: BorderRadius.circular(20),
+                                      image: DecorationImage(
+                                        image: NetworkImage(snap['image'],),
+                                        fit: BoxFit.cover,
+                                      )
+                                    ),
                                   ),
                                 ),
 

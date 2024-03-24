@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:recipefood/constants/show_detail_dialog.dart';
 
 import '../components/circle_button.dart';
 import '../components/custom_clip_path.dart';
@@ -62,14 +64,19 @@ class _DetailScreenState extends State<DetailScreen> {
                   Text("$time min" ),
                   SizedBox(height: h*.01,),
         
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       CircleButton(
                         icon: Icons.share, label: 'Share',
                       ),
-                      CircleButton(
-                        icon: Icons.fastfood, label: 'Calories',
+                      GestureDetector(
+                        onTap: (){
+                          ShowDialog.showColories(widget.item['totalNutrients'], context);
+                        },
+                        child: const CircleButton(
+                          icon: Icons.fastfood, label: 'Calories',
+                        ),
                       ),
                       CircleButton(
                         icon: CupertinoIcons.heart_fill, label: 'Favourite',

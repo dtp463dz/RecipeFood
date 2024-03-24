@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const Text('see all'),
+
                   SizedBox(height: h*.022),
                 ],
               ),
